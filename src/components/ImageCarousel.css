@@ -1,0 +1,75 @@
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  color: white;
+  text-align: left;
+  z-index: 10;
+}
+
+.carousel-text h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.carousel-text p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.carousel-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.hero-carousel {
+  position: relative;
+  width: 90%;
+  max-width: 1400px;
+  height: 90vh;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  color: white;
+  text-align: left;
+  z-index: 10;
+}

@@ -1,0 +1,59 @@
+.know-ana {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-toggle {
+  display: none;
+}
+
+.accordion-question {
+  display: block;
+  background-color: #f0f0f0;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.accordion-toggle:checked + .accordion-question + .accordion-answer {
+  display: block;
+}
+
+.accordion-answer {
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.response-buttons button {
+  margin-right: 10px;
+}
+
+.correction-box {
+  margin-top: 10px;
+}
+
+.correction-box input {
+  padding: 5px;
+  border-radius: 4px;
+  width: 100%;
+  border: 1px solid #aaa;
+}
+
+.score {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.final-submit {
+  text-align: center;
+  margin-top: 20px;
+}

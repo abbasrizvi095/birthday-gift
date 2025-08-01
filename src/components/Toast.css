@@ -1,0 +1,21 @@
+/* Toast.css */
+.toast-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fff8dc;
+  color: #333;
+  padding: 1rem 2rem;
+  border: 1px solid #ffa500;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  z-index: 9999;
+  font-size: 1.1rem;
+  animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}

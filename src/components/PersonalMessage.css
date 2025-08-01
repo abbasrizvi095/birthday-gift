@@ -1,0 +1,36 @@
+.personal-message-section {
+  padding: 80px 20px;
+  background-color: #fff5f8;
+  display: flex;
+  justify-content: center;
+}
+
+.personal-message-container {
+  max-width: 800px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.personal-message-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e91e63;
+}
+
+.personal-message-container p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.signed {
+  font-style: italic;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #c2185b;
+}
