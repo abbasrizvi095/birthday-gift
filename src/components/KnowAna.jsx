@@ -28,8 +28,8 @@ const KnowAna = () => {
   const [questions, setQuestions] = useState(baseQuestions);
   const [responses, setResponses] = useState(Array(baseQuestions.length).fill(null));
   const [corrections, setCorrections] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
-  // Load corrections from localStorage and override answers
   useEffect(() => {
     const storedCorrections = JSON.parse(localStorage.getItem('anaQuizCorrections')) || {};
     if (Object.keys(storedCorrections).length > 0) {
@@ -54,65 +54,77 @@ const KnowAna = () => {
 
   const handleFinalSubmit = () => {
     localStorage.setItem("anaQuizCorrections", JSON.stringify(corrections));
-    alert("Corrections saved successfully! 📝");
-    // Also update displayed answers without reload
     const updated = questions.map((q, i) => ({
       ...q,
       answer: corrections[i] || q.answer
     }));
     setQuestions(updated);
+    setSubmitted(true);
   };
 
+  const isComplete = responses.every(r => r !== null);
   const score = responses.filter(r => r === true).length;
 
   return (
-    <div className="know-ana">
-      <h2>🧠 How Well Do I Know Ana?</h2>
-      <div className="accordion">
-        {questions.map((q, index) => (
-          <div className="accordion-item" key={index}>
-            <input type="checkbox" id={`q${index}`} className="accordion-toggle" />
-            <label htmlFor={`q${index}`} className="accordion-question">{q.question}</label>
-            <div className="accordion-answer">
-              <p><strong>Answer:</strong> {q.answer}</p>
+      <div className="know-ana">
+        <h2>🧠 How Well Do I Know Ana?</h2>
+        <div className="accordion">
+          {questions.map((q, index) => (
+              <div className={`accordion-item ${responses[index] === true ? 'correct' : responses[index] === false ? 'wrong' : ''}`} key={index}>
+                <input type="checkbox" id={`q${index}`} className="accordion-toggle" />
+                <label htmlFor={`q${index}`} className="accordion-question">{q.question}</label>
+                <div className="accordion-answer">
+                  <p><strong>Answer:</strong> {q.answer}</p>
 
-              {responses[index] === null ? (
-                <div className="response-buttons">
-                  <button onClick={() => handleResponse(index, true)}>✅ Right</button>
-                  <button onClick={() => handleResponse(index, false)}>❌ Wrong</button>
-                </div>
-              ) : (
-                <p>You marked this as: {responses[index] ? "✅ Right" : "❌ Wrong"}</p>
-              )}
+                  {responses[index] === null ? (
+                      <div className="response-buttons">
+                        <button className="right" onClick={() => handleResponse(index, true)}>✅ Right</button>
+                        <button className="wrong" onClick={() => handleResponse(index, false)}>❌ Wrong</button>
+                      </div>
+                  ) : (
+                      <p className="response-summary">
+                        You marked this as: <strong>{responses[index] ? "✅ Right" : "❌ Wrong"}</strong>
+                      </p>
+                  )}
 
-              {responses[index] !== null && !responses[index] && (
-                <div className="correction-box">
-                  <label htmlFor={`correct-answer-${index}`}>Your Correct Answer:</label>
-                  <input
-                    type="text"
-                    id={`correct-answer-${index}`}
-                    value={corrections[index] || ''}
-                    onChange={(e) => handleCorrectionChange(index, e.target.value)}
-                    placeholder="Enter correct answer"
-                  />
+                  {responses[index] === false && (
+                      <div className="correction-box">
+                        <label htmlFor={`correct-answer-${index}`}>Your Correct Answer:</label>
+                        <input
+                            type="text"
+                            id={`correct-answer-${index}`}
+                            value={corrections[index] || ''}
+                            onChange={(e) => handleCorrectionChange(index, e.target.value)}
+                            placeholder="Enter correct answer"
+                        />
+                      </div>
+                  )}
                 </div>
-              )}
+              </div>
+          ))}
+        </div>
+
+        <div className="final-submit">
+          <button
+              onClick={handleFinalSubmit}
+              disabled={!isComplete}
+              title={!isComplete ? "Answer all questions first" : ""}
+          >
+            💾 Save All Corrections
+          </button>
+        </div>
+
+        {submitted && (
+            <div className="score">
+              <h2>Score: {score} / {questions.length}</h2>
+              <p>
+                {score === 20 ? '💖 Perfect! You really know Ana well!' :
+                    score > 10 ? '😊 Good effort!' :
+                        '🤔 Time to spend more time with Ana!'}
+              </p>
             </div>
-          </div>
-        ))}
+        )}
       </div>
-
-      <div className="score">
-        <h2>Score: {score} / {questions.length}</h2>
-        <p>{score === 20 ? '💖 Perfect! You really know Ana well!' :
-            score > 10 ? '😊 Good effort!' :
-            '🤔 Time to spend more time with Ana!'}</p>
-      </div>
-
-      <div className="final-submit">
-        <button onClick={handleFinalSubmit}>Save All Corrections</button>
-      </div>
-    </div>
   );
 };
 
