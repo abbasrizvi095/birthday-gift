@@ -14,6 +14,7 @@ import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import KnowAna from "../components/KnowAna";
 import BackgroundMusic from "../components/BackgroundMusic";
+import Shop from "../components/Shop";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -53,7 +54,7 @@ const App = () => {
         <Route path="/gallery" element={
           isLoggedIn ? (
             <>
-              <BackgroundMusic videoId="JGwWNGJdvx8" /> {/* Ed Sheeran - Shape of You */}
+              <BackgroundMusic videoId="kPa7bsKwL-c" />
               <Gallery />
             </>
           ) : (
@@ -63,7 +64,7 @@ const App = () => {
         <Route path="/personal-message" element={
           isLoggedIn ? (
             <>
-              <BackgroundMusic videoId="Lr31w_WfBzI" /> {/* Arijit - Tum Hi Ho */}
+              <BackgroundMusic videoId="-BjZmE2gtdo" />
               <PersonalMessage />
             </>
           ) : (
@@ -73,7 +74,7 @@ const App = () => {
         <Route path="/know-ana" element={
           isLoggedIn ? (
             <>
-              <BackgroundMusic videoId="K0ibBPhiaG0" /> {/* Pharrell - Happy */}
+              <BackgroundMusic videoId="JgDNFQ2RaLQ" />
               <KnowAna />
             </>
           ) : (
@@ -81,6 +82,9 @@ const App = () => {
             
           )
         } />
+        <Route path="/shop" element={
+          isLoggedIn ? <Shop /> : <Navigate to="/login" replace />}
+        />
         <Route path="/" element={
           isLoggedIn ? (
             <>

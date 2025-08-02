@@ -1,0 +1,103 @@
+.shop-container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 2rem;
+  background: #fffafc;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
+}
+
+.shop-intro {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #7d3c98;
+}
+
+.shop-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.add-link-btn,
+.submit-btn {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #f48fb1;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-link-btn:hover,
+.submit-btn:hover {
+  background: #ec407a;
+}
+
+.success-msg {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+}
+
+.shop-page {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.shop-page input[type="input"] {
+  display: block;
+  width: 90%;
+  margin: 0.5rem auto;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.shop-page button {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f06292;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.success-msg {
+  color: green;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ffd6e6;
+  border-top: 5px solid #f06292;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

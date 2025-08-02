@@ -24,6 +24,7 @@ const Navbar = ({ isLoggedIn }) => {
         </li>
         <li><Link to="/gallery" className="nav-link subtle-link">Gallery</Link></li>
         <li><Link to="/know-ana" className="nav-link subtle-link">Know Ana</Link></li>
+        <li><Link to="/shop" className="nav-link subtle-link">Shop</Link></li>
       </ul>
     </nav>
   );
