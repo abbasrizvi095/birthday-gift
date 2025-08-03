@@ -8,7 +8,7 @@ const Navbar = ({ isLoggedIn }) => {
     <nav className="navbar subtle-navbar">
       <div className="navbar-logo subtle-logo">
         <Link to="/">
-          <img src="/gallery/IMG_5399.png" alt="Ana's Birthday" className="navbar-logo-image" />
+          <img src="/gallery/IMG_5399.webp" alt="Ana's Birthday" className="navbar-logo-image" />
         </Link>
       </div>
       <ul className="navbar-links">
