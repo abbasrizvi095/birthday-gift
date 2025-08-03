@@ -51,6 +51,7 @@
   margin: auto;
   text-align: center;
   font-family: 'Arial', sans-serif;
+  min-height: 560px;
 }
 
 .shop-page input[type="input"] {

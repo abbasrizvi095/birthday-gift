@@ -2,26 +2,26 @@ import React, { useState, useEffect } from 'react';
 import './KnowAna.css';
 
 const baseQuestions = [
-  { question: "Ana's comfort food?", answer: "Maggi 🍜" },
-  { question: "Ana's favorite color?", answer: "Purple 💜" },
-  { question: "Ana's dream travel destination?", answer: "Switzerland 🇨🇭" },
+  { question: "Ana's comfort food?", answer: "Khichdi" },
+  { question: "Ana's favorite color?", answer: "White & Black" },
+  { question: "Ana's dream travel destination?", answer: "Northern Lights" },
   { question: "Ana’s birthday?", answer: "6th August 🎂" },
-  { question: "Ana’s favorite dessert?", answer: "Chocolate Lava Cake 🍫" },
+  { question: "Ana’s favorite dessert?", answer: "Waffles" },
   { question: "Ana’s favorite movie?", answer: "The Notebook 🎥" },
-  { question: "Ana’s preferred beverage?", answer: "Cold Coffee ☕" },
-  { question: "Ana’s favorite flower?", answer: "Lily 🌸" },
-  { question: "Ana’s favorite holiday?", answer: "Christmas 🎄" },
+  { question: "Ana’s preferred beverage?", answer: "Chaas from Katakir" },
+  { question: "Ana’s favorite flower?", answer: "Tulips and Lilies 🌸" },
+  { question: "Ana’s favorite holiday?", answer: "New Year" },
   { question: "Ana’s pet name for you?", answer: "Babu 🐣" },
-  { question: "Ana’s favorite animal?", answer: "Dog 🐶" },
-  { question: "Ana’s favorite ice cream flavor?", answer: "Belgian Chocolate 🍦" },
-  { question: "Ana’s favorite shopping site?", answer: "Myntra 🛍️" },
-  { question: "Ana’s go-to outfit?", answer: "Kurti and Jeans 👗" },
-  { question: "Ana’s hobby?", answer: "Painting 🎨" },
-  { question: "Ana’s favorite series?", answer: "Friends 👯‍♀️" },
+  { question: "Ana’s favorite animal?", answer: "Me" },
+  { question: "Ana’s favorite ice cream flavor?", answer: "Fruit Concepts 🍦" },
+  { question: "Ana’s favorite shopping site?", answer: "Savana and Newme 🛍️" },
+  { question: "Ana’s go-to outfit?", answer: "Pyjama" },
+  { question: "Ana’s hobby?", answer: "Scrolling" },
+  { question: "Ana’s favorite series?", answer: "BBT among others 👯‍♀️" },
   { question: "Ana’s zodiac sign?", answer: "Leo ♌" },
   { question: "Ana’s favorite emoji?", answer: "🥺" },
   { question: "Ana’s favorite music genre?", answer: "Romantic ❤️" },
-  { question: "Ana’s favorite person?", answer: "You 😄" }
+  { question: "Ana’s favorite person?", answer: "Me 😄" }
 ];
 
 const KnowAna = () => {

@@ -8,13 +8,16 @@ const AboutSection = () => {
       <div className="about-container">
         <h2>About Ana</h2>
         <p>
-          Ana is a vibrant soul, full of life, laughter, and love. She's the
-          heartbeat of every moment we’ve shared, and this space is a celebration
-          of her warmth, charm, and the joy she brings to everyone around her.
+          You are a whole vibe. ✨ You don’t just light up a room — you basically set off emotional fireworks wherever you go. You're loud in the best way, soft in the moments that matter, and honestly, you make life about ten shades more colorful (and a lot less boring).
         </p>
         <p>
-          This little website is just a tiny glimpse into what she means to me and
-          the incredible memories we've created together.
+          You’re the reason for so many of my favorite memories — from the silly, snort-laugh kind of moments to the quiet, deep ones that just make me stop and think, “How did I get this lucky?” Being around you is like having front-row seats to the best kind of magic show… except with more sass, better outfits, and definitely more snack breaks.
+        </p>
+        <p>
+          This little website? It’s just a small attempt to show how wildly special you are to me. It can’t capture everything — I mean, how do you even fit your level of amazing into one site? But it’s my love letter in pixels, a little tribute to everything you are: hilarious, kind, beautiful, dramatic (yes, I said it 😏), and so completely you.
+        </p>
+        <p>
+          You’re not just part of my story — you’re the plot twist, the main character, the narrator, and probably the editor too.
         </p>
       </div>
     </section>
