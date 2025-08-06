@@ -15,6 +15,7 @@ import Gallery from "../components/Gallery";
 import KnowAna from "../components/KnowAna";
 import BackgroundMusic from "../components/BackgroundMusic";
 import Shop from "../components/Shop";
+import "../App.css"
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

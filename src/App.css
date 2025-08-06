@@ -34,4 +34,13 @@ body {
   pointer-events: none;
 }
 
+.birthday-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontal center */
+  justify-content: center; /* vertical center if height is defined */
+  text-align: center;
+  padding: 1rem;
+}
+
 /* Add more styles in Navbar.css, Home.css, etc. */
