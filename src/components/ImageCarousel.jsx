@@ -13,7 +13,7 @@ const ImageCarousel = () => {
     <div className="hero-carousel">
       <img
         className="carousel-image"
-        src="/gallery/IMG_5614.webp"
+        src="/gallery/IMG_5820.webp"
         alt="Birthday Slide"
       />
       <div className="carousel-text">
